@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/et_projectName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:hint="@string/ProjectName" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/projectCat" />
+
+            <Spinner
+                android:id="@+id/sp_selectCat"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                />
+
+            <EditText
+                android:id="@+id/et_projectEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="@string/projectEmail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/et_projectContactNo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="@string/projectMobile"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/et_ProjectDonDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="@string/projectDonDeadline"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/et_projectDonationGoal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="@string/ProjectDoantionGoal"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_projectMinDonation"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="@string/projectMinDon"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/et_projectDescription"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="@string/projectDescription"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btn_update_project"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:text="Button"
+                android:layout_marginBottom="65dp"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:layout_marginBottom="50dp"/>
+
+            <Button
+                android:id="@+id/btn_next2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:layout_marginBottom="50dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
