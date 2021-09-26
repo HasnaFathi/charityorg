@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">miniproject</string>
+    <string name="app_name">MiniProject2</string>
+    <string name="btnUpdate">Update</string>
+    <string name="etID">Enter ID</string>
+    <string name="etName">Enter Name</string>
+    <string name="etcontact">Enter Contact Number</string>
+    <string name="etLoc">Enter Location</string>
+    <string name="etemail">Enter Email</string>
+    <string name="etdes">Enter a Description</string>
+    <string name="etDate">Enter Date</string>
+    <string name="btnadd">Add</string>
+    <string name="btnbrowse">Browse</string>
+    <string name="tbtext">Heart of Hope</string>
+    <string name="tbartext">Heart of Hope</string>
+    <string name="btnBrowse">Browse</string>
+    <string name="btnAdd">Add</string>
 </resources>
