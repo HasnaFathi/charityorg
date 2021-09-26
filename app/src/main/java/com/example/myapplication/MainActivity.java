@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         Button nextBtn = findViewById(R.id.btn_next);
         Button nextBtn2 = findViewById(R.id.btn_next2);
 
+        getSupportActionBar().setTitle("Add New Project");
+
         catList = new ArrayList<>();
         DatabaseReference r = FirebaseDatabase.getInstance().getReference();
         r.child("category").addValueEventListener(new ValueEventListener() {

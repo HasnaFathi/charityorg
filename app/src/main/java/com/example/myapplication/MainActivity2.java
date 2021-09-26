@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -41,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
     Project pr = new Project();
     long PID;
     DatabaseReference reff;
+    AlertDialog.Builder builder;
 
 
     @Override
@@ -57,6 +59,8 @@ public class MainActivity2 extends AppCompatActivity {
         min = findViewById(R.id.tv_display_MinDonation);
         editDetails = findViewById(R.id.btn_updatePage);
         removeProject = findViewById(R.id.btn_delete);
+
+        getSupportActionBar().setTitle("Project Details");
 
 
                 p = getIntent().getParcelableExtra("project");
@@ -180,11 +184,31 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
+        builder = new AlertDialog.Builder(this);
+        builder.setTitle("Are you sure?");
+        builder.setMessage("Once a project is removed it cannot be undone");
+
+        builder.setPositiveButton("Remove Project", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                deleteProject(p);
+
+                Toast.makeText(MainActivity2.this, "Project Removed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
         removeProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                deleteProject(p);
+                builder.show();
 
             }
         });

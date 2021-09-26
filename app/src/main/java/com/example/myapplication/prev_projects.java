@@ -39,8 +39,10 @@ public class prev_projects extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView_prevProjects);
         projectList = new ArrayList<>();
 
+        getSupportActionBar().setTitle("Previous Projects");
+
         setProjects();
-        //setOnClickListner();
+        setOnClickListner();
         adapter = new RecyclerViewAdapter(projectList, listner);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -103,21 +105,21 @@ public class prev_projects extends AppCompatActivity {
 //
 //    }
 
-//    private void setOnClickListner() {
-//        listner = new RecyclerViewAdapter.RecyclerViewClickListner() {
-//            @Override
-//            public void onClick(View v, int position) {
-//                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-//                intent.putExtra("project", projectList.get(position));
-//                startActivity(intent);
-//            }
-//        };
-//    }
+    private void setOnClickListner() {
+        listner = new RecyclerViewAdapter.RecyclerViewClickListner() {
+            @Override
+            public void onClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), prev_project_details.class);
+                intent.putExtra("project", projectList.get(position));
+                startActivity(intent);
+            }
+        };
+    }
 
 
 //    private void setAdapter() {
 //
-//       RecyclerViewAdapter adapter = new RecyclerViewAdapter(projectList);
+//       RecyclerViewAdapter adapter = new RecyclerViewAdapter(projectList, th);
 //       RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
 //       recyclerView.setLayoutManager(layoutManager);
 //       recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -127,7 +129,7 @@ public class prev_projects extends AppCompatActivity {
 
     private void setProjects() {
 
-        DatabaseReference reff = FirebaseDatabase.getInstance().getReference("prevProjects");
+        DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("prevProjects");
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

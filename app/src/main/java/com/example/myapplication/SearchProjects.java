@@ -46,6 +46,8 @@ public class SearchProjects extends AppCompatActivity {
         recyclerView = findViewById(R.id.RecyclerView_DisplayProjects);
         projectList = new ArrayList<>();
 
+        getSupportActionBar().setTitle("Projects");
+
         setProjects();
         setOnClickListner();
         adapter = new RecyclerViewAdapter(projectList, listner);

@@ -54,6 +54,7 @@ public class CategoryActivity extends AppCompatActivity {
         catList = new ArrayList<>();
         addCat = findViewById(R.id.btn_AddCat);
         newCat = findViewById(R.id.et_AddNewCat);
+        getSupportActionBar().setTitle("Category");
 
 
         setProjects();
