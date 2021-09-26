@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+    tools:context=".addEvent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"
+        android:hint="Event Name"
+        android:textSize="20sp"
+        android:id="@+id/add_name"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"
+        android:hint="Date"
+        android:textSize="20sp"
+        android:id="@+id/add_date"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"
+        android:hint="Location"
+        android:textSize="20sp"
+        android:id="@+id/add_location"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"
+        android:hint="Email"
+        android:textSize="20sp"
+        android:id="@+id/add_email"/>
+
+
+
+    <Button
+        android:id="@+id/add_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Add Event"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/add_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Back"
+        android:textSize="20sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
