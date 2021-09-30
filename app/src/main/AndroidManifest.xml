@@ -3,7 +3,7 @@
     package="com.example.miniproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,17 +13,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Miniproject">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
             android:name=".addEvent"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".EventMainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+        <activity
+            android:name=".OrgInsert"
+            android:exported="true" />
+        <activity
+            android:name=".Org_MainActivity"
+            android:exported="true"/>
+
+        <activity android:name=".prev_project_details"></activity>
+        <activity android:name=".prev_projects" />
+
+        <activity android:name=".AddProject" />
+
+        <activity android:name=".CategoryActivity" />
+        <activity
+            android:name=".SearchProjects"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".ViewProjectDetails" />
+        <activity
+            android:name=".ProductLandingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        </activity>
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

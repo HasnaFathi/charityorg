@@ -14,4 +14,33 @@
     <string name="tbartext">Heart of Hope</string>
     <string name="btnBrowse">Browse</string>
     <string name="btnAdd">Add</string>
+
+
+
+    <string name="ProjectName">Name</string>
+    <string name="projectEmail">Contact Email</string>
+    <string name="projectMobile">Contact Number</string>
+    <string name="projectDonDeadline">Donation Deadline</string>
+    <string name="ProjectDoantionGoal">Donation Goal</string>
+    <string name="projectMinDon">Minimum Donation</string>
+    <string name="projectDescription">Description</string>
+    <string name="projectCat">"Category "</string>
+    <string name="Searchvar">  Search...</string>
+    <string name="Categories">Categories</string>
+    <string name="addCat">Add New Category</string>
+    <string name="addCat2">Add Category</string>
+    <string name="Category">Category</string>
+    <string name="Update_details">Update Details</string>
+    <string name="deleteP">Remove Project</string>
+    <string name="Projects">Projects</string>
+    <string name="SearchProjects">Search Projects</string>
+    <string name="addProject">Add New Project</string>
+    <string name="CompletedProjects">Completed Projecs</string>
+    <string name="PreviousProjects">Previous Projects</string>
+    <string name="SelectImage">Add Imgae</string>
+    <string name="logotext">Heart of Hope</string>
+    <string name="btnProject">Projects</string>
+    <string name="btnEvent">Events</string>
+    <string name="btnOrg">Organization</string>
+    <string name="btnEmp">Employee</string>
 </resources>
