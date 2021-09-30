@@ -10,7 +10,15 @@
         <entry key="..\:/Users/User/Desktop/miniproject/app/src/main/res/menu/searchmenu.xml" value="0.264" />
         <entry key="..\:/Users/User/Desktop/miniproject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.23148148148148148" />
         <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/drawable/add.xml" value="0.14375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/drawable/edit.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/activity_add_project.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/activity_insert_org.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/activity_main2.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/eventmain.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/org_singlerow.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/product_landing.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/layout/singlerow.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/user/AndroidStudioProjects/clonedchar/app/src/main/res/menu/orgsearchmenu.xml" value="0.12760416666666666" />
       </map>
     </option>

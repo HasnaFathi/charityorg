@@ -15,40 +15,33 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Org_MainActivity extends AppCompatActivity {
+public class EventMainActivity extends AppCompatActivity {
 
     RecyclerView recview;
-    adapter_org adapter;
-    FloatingActionButton add;
-
-
-
-
+    myAdapter adapter;
+    FloatingActionButton fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.orgactivity_main);
+        setContentView(R.layout.eventmain);
 
+       recview=(RecyclerView) findViewById(R.id.recview);
+       recview.setLayoutManager(new LinearLayoutManager(this));
 
-
-        recview=(RecyclerView)findViewById(R.id.recView);
-        recview.setLayoutManager(new LinearLayoutManager(this));
-
-        FirebaseRecyclerOptions<organization> options =
-                new FirebaseRecyclerOptions.Builder<organization>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Organization"), organization.class)
+        FirebaseRecyclerOptions<Event> options =
+                new FirebaseRecyclerOptions.Builder<Event>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event"), Event.class)
                         .build();
-
-        adapter=new adapter_org(options);
+        adapter = new myAdapter(options);
         recview.setAdapter(adapter);
 
-        add=(FloatingActionButton)findViewById(R.id.btninsert);
-
-        add.setOnClickListener(new View.OnClickListener() {
+        fb=(FloatingActionButton) findViewById(R.id.fadd);
+        fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Org_MainActivity.this, OrgInsert.class));
+                Intent intent = new Intent(EventMainActivity.this,addEvent.class);
+                startActivity(intent);
             }
         });
 
@@ -60,7 +53,6 @@ public class Org_MainActivity extends AppCompatActivity {
         adapter.startListening();
     }
 
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -69,40 +61,38 @@ public class Org_MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.orgsearchmenu,menu);
 
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
+        MenuItem item = menu.findItem(R.id.search);
 
-        MenuItem item=menu.findItem(R.id.search);
-
-        SearchView searchView=(SearchView)item.getActionView();
+        SearchView searchView = (SearchView) item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                process_search(s);
+                processsearch(s);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String s) {
-                process_search(s);
+                processsearch(s);
                 return false;
             }
         });
-
         return super.onCreateOptionsMenu(menu);
-
     }
 
-    private void process_search(String s) {
+    private void processsearch(String s) {
 
-        FirebaseRecyclerOptions<organization> options =
-                new FirebaseRecyclerOptions.Builder<organization>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Organization").orderByChild("name").startAt(s).endAt(s+"\uf8ff"), organization.class)
+        FirebaseRecyclerOptions<Event> options =
+                new FirebaseRecyclerOptions.Builder<Event>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event").orderByChild("name").startAt(s).endAt(s+"\uf8ff"),Event.class)
                         .build();
-
-        adapter=new adapter_org(options);
+        adapter = new myAdapter(options);
         adapter.startListening();
         recview.setAdapter(adapter);
+
+
     }
 }
