@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Event> options =
                 new FirebaseRecyclerOptions.Builder<Event>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event").orderByChild("name").startAt(s).endAt(s+"\uf8ff"),Event.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event").orderByChild("name")
+                                .startAt(s).endAt(s+"\uf8ff"),Event.class)
                         .build();
         adapter = new myAdapter(options);
         adapter.startListening();

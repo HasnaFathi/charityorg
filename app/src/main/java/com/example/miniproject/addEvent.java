@@ -38,13 +38,11 @@ import java.util.Random;
 public class addEvent extends AppCompatActivity {
 
     EditText name,date,location,email ;
-    Button addev;
+    Button addev,back;
     DatabaseReference reff;
     Event ev;
-    Button back;
 
     private void clearControls(){
-
         name.setText("");
         date.setText("");
         location.setText("");
@@ -61,7 +59,6 @@ public class addEvent extends AppCompatActivity {
         location= findViewById(R.id.add_location);
         email= findViewById(R.id.add_email);
         addev =  findViewById(R.id.add_submit);
-
         ev = new Event();
 
         back=(Button)findViewById(R.id.add_back);
@@ -78,7 +75,6 @@ public class addEvent extends AppCompatActivity {
             public void onClick(View v) {
                 reff= FirebaseDatabase.getInstance().getReference().child("Event");
                 try{
-
                     if(TextUtils.isEmpty(name.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please Enter the Event name", Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(date.getText().toString()))
@@ -88,26 +84,17 @@ public class addEvent extends AppCompatActivity {
                     else if (TextUtils.isEmpty(email.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please Enter the email", Toast.LENGTH_SHORT).show();
                     else {
-
                         ev.setName(name.getText().toString().trim());
                         ev.setDate(date.getText().toString().trim());
                         ev.setLocation(location.getText().toString().trim());
                         ev.setEmail(email.getText().toString().trim());
-
-
-
                         reff.push().setValue(ev);
-
                         Toast.makeText(getApplicationContext(), "Data Inserted Successfully", Toast.LENGTH_LONG).show();
                         clearControls();
                     }
-
                 }catch (Exception e){
-
                     Toast.makeText(getApplicationContext(), "Data Inserted Unsuccessful", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
 

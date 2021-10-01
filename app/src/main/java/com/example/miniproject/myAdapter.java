@@ -58,7 +58,6 @@ public class myAdapter extends FirebaseRecyclerAdapter<Event,myAdapter.myviewhol
                 final EditText email = myview.findViewById(R.id.uemail);
                 Button submit = myview.findViewById(R.id.usubmit);
 
-
                 name.setText(Event.getName());
                 date.setText(Event.getDate());
                 location.setText(Event.getLocation());
@@ -71,7 +70,6 @@ public class myAdapter extends FirebaseRecyclerAdapter<Event,myAdapter.myviewhol
                     public void onClick(View view) {
 
                         Map<String, Object> map = new HashMap<>();
-
                         map.put("name",name.getText().toString());
                         map.put("date",date.getText().toString());
                         map.put("location",location.getText().toString());
@@ -83,7 +81,6 @@ public class myAdapter extends FirebaseRecyclerAdapter<Event,myAdapter.myviewhol
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         dialogPlus.dismiss();
-
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
@@ -95,7 +92,6 @@ public class myAdapter extends FirebaseRecyclerAdapter<Event,myAdapter.myviewhol
                                 });
                     }
                 });
-
             }
         });
 
@@ -111,12 +107,11 @@ public class myAdapter extends FirebaseRecyclerAdapter<Event,myAdapter.myviewhol
 
                         FirebaseDatabase.getInstance().getReference().child("Event")
                                 .child(getRef(position).getKey()).removeValue();
-
                     }
                 });
                 builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                        public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
                 });

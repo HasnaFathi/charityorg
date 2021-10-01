@@ -51,8 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="This is Demo Name"
-                    android:textColor="@color/lightgrey"
-                    android:textColorHint="@color/lightgrey"
+
                     android:textSize="20sp"
                     android:textStyle="bold" />
                 <!--android:layout_toRightOf="@id/img1"-->
@@ -64,10 +63,10 @@
                     android:layout_below="@id/nametext"
                     android:layout_marginLeft="10dp"
                     android:text="This is Course Name"
-                    android:textColor="@color/lightgrey"
-                    android:textColorHint="@color/lightgrey"
                     android:textSize="20sp" />
 
+                <!--android:textColor="@color/lightgrey"
+                    android:textColorHint="@color/lightgrey"-->
 
                 <TextView
                     android:id="@+id/locationtext"
@@ -76,8 +75,6 @@
                     android:layout_below="@id/contacttext"
                     android:layout_marginLeft="10dp"
                     android:text="This is Location Name"
-                    android:textColor="@color/lightgrey"
-                    android:textColorHint="@color/lightgrey"
                     android:textSize="20sp" />
 
                 <TextView
@@ -87,8 +84,6 @@
                     android:layout_below="@id/locationtext"
                     android:layout_marginLeft="10dp"
                     android:text="This is Email Name"
-                    android:textColor="@color/lightgrey"
-                    android:textColorHint="@color/lightgrey"
                     android:textSize="20sp" />
 
                 <TextView
@@ -98,8 +93,6 @@
                     android:layout_below="@id/emailtext"
                     android:layout_marginLeft="10dp"
                     android:text="This is Description"
-                    android:textColor="@color/lightgrey"
-                    android:textColorHint="@color/lightgrey"
                     android:textSize="20sp" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
